@@ -67,6 +67,6 @@ img {
 }
 @media screen and (min-width: 992px) {
   .slider-container {
-    height: 90vh;
+    height: 80vh;
   }
 }
