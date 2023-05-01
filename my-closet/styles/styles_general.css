@@ -21,6 +21,7 @@ body {
 }
 
 .num-items button{
+    font-size: 20px;
     width: 150px;
     height: 40px;
     border-width: 3px;
@@ -30,10 +31,11 @@ body {
 .slider-container {
     border: 5px solid rgb(86, 86, 86);
     width: 750px;
-    height: 1000px;
+    height: 720px;
     margin: 0 auto;
     position: relative;
-    border-radius: 0.5rem;
+    border-radius: 0;
+    border-bottom: none;
     overflow: hidden;
     background-color: rgb(252, 252, 252);
 }
@@ -46,7 +48,6 @@ body {
 
 .upper-body img {
     width: 350px;
-
     position: absolute;
 }
 
@@ -170,25 +171,83 @@ body {
 }
 
 .other-buttons{
-    margin-top: 20px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
 
-@media screen and (min-width: 576px) {
-    .slider-container {
-        height: 100%;
-    }
+
+
+
+/*----------------Lower Body---------------*/
+
+#fitting-room-lower{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
-    .slider-container {
-        height: 100%;
-    }
+.slider-container-lower {
+    border: 5px solid rgb(86, 86, 86);
+    width: 750px;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0;
+    border-top: none;
+    overflow: hidden;
+    background-color: rgb(252, 252, 252);
 }
 
-@media screen and (min-width: 992px) {
-    .slider-container {
-        height: 80vh;
-    }
+.slide-lower {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: all 0.45s ease-in-out;
+    margin-top: 200px;
 }
+
+.slide-img-lower{
+    width: 350px;
+    position: absolute;
+}
+
+.num-items-lower{
+   
+    display: flex;
+    position: absolute;
+    margin-top: 580px;
+    margin-left: 40px;
+}
+
+.num-items-lower button{
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+/*individual buttoms editting*/
+
+.ae-light img{
+    width: 390px;
+}
+
+.gap-beige img{
+    width: 440px;
+}
+
+.levis-dark img{
+    width: 400px;
+}
+
+.nike-black img{
+    width: 320px;
+}
+
+
+
