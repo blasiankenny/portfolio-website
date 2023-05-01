@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(198, 193, 193);
+    background-size: 100%;
+}
+
+#fitting-room{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.num-items{
+   
+    display: flex;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.num-items button{
+    width: 150px;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.slider-container {
+    border: 5px solid rgb(86, 86, 86);
+    width: 750px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgb(252, 252, 252);
+}
+
+.upper-body{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.upper-body img {
+    width: 350px;
+
+    position: absolute;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: all 0.45s ease-in-out;
+    margin-top: 160px;
+}
+
+.slide-img {
+    width: 465px;
+}
+
+/*-------Individual item edtting---------*/
+
+.kamuy img{
+    width: 440px;
+}
+
+.hm-jacket-white{
+    margin-top: 100px;
+}
+.alfred{
+    margin-top: 154px;
+    padding-right: 4px;
+}
+
+.fountain{
+    margin-top: 144px;
+    margin-left: 13px;
+}
+
+.fountain img{
+    width: 480px;
+}
+
+.hm-sherpa{
+    margin-top: 100px;
+    padding-right: 4px;
+}
+
+.hm-sherpa img{
+    width: 480px;
+}
+
+.levis-denim{
+    margin-top: 155px;
+    padding-right: 4px;
+}
+
+.levis-denim img{
+    width: 420px;
+}
+
+.levis-sherpa{
+    margin-top: 124px;
+}
+.levis-sherpa img{
+    width: 460px;
+}
+
+.redhead{
+    margin-top: 83px;
+    padding-right: 0.5px;
+}
+.redhead img{
+    width: 440px;
+}
+
+.vans{
+    margin-top: 140px;
+    margin-left: 10px;
+}
+
+.zara-denim{
+    margin-top: 150px;
+    margin-left: 15px;
+}
+
+.zara-denim img{
+    width: 420px;
+}
+
+/*---------------------------------------*/
+
+.resetBtn-black,
+.resetBtn,
+.colourBtn,
+.prevBtn,
+.nextBtn {
+    color: rgb(0, 0, 0);
+    background: rgb(172, 172, 172);
+    border-color: transparent;
+    border-radius: 10px;
+    width: 130px;
+    font-size: 1.75rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border: 2px solid rgb(86, 86, 86);
+
+}
+
+.prevBtn{
+    display: block;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    color: rgb(46, 146, 61);
+}
+
+.other-buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+    .slider-container {
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slider-container {
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .slider-container {
+        height: 80vh;
+    }
+}
