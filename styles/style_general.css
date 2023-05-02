@@ -479,6 +479,7 @@ nav .fa-solid {
     display: none;
 }
 
+
 @media only screen and (max-width: 600px) {
 
 
@@ -541,7 +542,7 @@ nav .fa-solid {
         z-index: 1;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 140px;
         height: 100vh;
         padding-top: 50px;
