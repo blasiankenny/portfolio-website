@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll(".slide");
 const nextBtn = document.querySelector(".nextBtn");
 const prevBtn = document.querySelector(".prevBtn");
+
 slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
@@ -17,12 +18,12 @@ prevBtn.addEventListener("click", function () {
 
 function carousel() {
   // working with slides
-  // if (counter === slides.length) {
-  //   counter = 0;
-  // }
-  // if (counter < 0) {
-  //   counter = slides.length - 1;
-  // }
+  if (counter === slides.length) {
+    counter = 0;
+  }
+  if (counter < 0) {
+    counter = slides.length - 1;
+  }
   // working with buttons
 
   if (counter < slides.length - 1) {

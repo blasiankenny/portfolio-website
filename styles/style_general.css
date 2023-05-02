@@ -5,11 +5,15 @@
     box-sizing: border-box;
 }
 
+
 body{
-    background: #080808;
+    background: #d0d2ba;
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 /*---------------header-----------------*/
 
 #header{
@@ -47,23 +51,31 @@ nav{
 
 .header-contents{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-gap: 150px; 
+    grid-template-columns: 1fr 1fr; 
     align-items: center;
 
 }
 .header-contents .header-text{
     margin-left: 150px;
+    font-size: 50px;
 }
 .header-contents img{
    
-    width: 400px;
+    width: 650px;
     margin-top: 100px;
     margin-left: 30px;
     border-style: solid;
     border-radius: 30px;
     border-color: #080808;
     background-color: rgb(70, 69, 69);
+    box-shadow: 0 0px 1000px rgba(250, 250, 250, 0.5);
+      
+      
+}
+
+.header-img-container{
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li{
@@ -75,7 +87,7 @@ nav ul li{
 nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
     position: relative;
 }
 
@@ -106,35 +118,42 @@ nav ul li a:hover::after{
 
 #about{
     margin: 200px 0px;
+    padding-top: 100px;
+    padding-bottom: 200px;
     height: 931.333px;
-    color: grey;
+    color: rgb(0, 0, 0);
 }
 
 
 
 .row{
-    margin-left: 0px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
 
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-top: 20px;
+    
 }
 
 .about-col-1{
-    flex-basis: 40%;
+    display: grid;
+    justify-content: center;
+
 }
 
 .about-col-1 img{
     width: 400px;
-    margin-top: 100px;
+    object-fit: cover;
     border-style: solid;
     border-radius: 30px;
     border-color: white;
     background-color: rgb(70, 69, 69);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
 }
 
 .about-col-2{
-    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-col-2 p{
@@ -144,10 +163,13 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 600;
-    color: white;
+    color: rgb(255, 255, 255);
+
+    
 }
+
 
 
 
@@ -192,13 +214,13 @@ nav ul li a:hover::after{
 }
 
 .tab-contents span{
-    color: rgb(246, 248, 210);
+    color: rgb(105, 119, 246);
 }
 
 .tab-contents-skills{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 200px;
 }
 
 .tab-contents-experience{
@@ -220,12 +242,13 @@ nav ul li a:hover::after{
 
 
 #portfolio{
-    padding: 50px 0px;
+    padding: 80px 0px;
     width: 100%;
     height: 100vh;
     background-image: url(../images/bakcground.jpg);
     background-size: cover;
     background-position: center;
+
 }
 
 
@@ -240,6 +263,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
 }
 
 .work img{
@@ -249,6 +273,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
+    
 }
 
 .layer{
@@ -332,6 +357,10 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 
+.contact-left p i{
+    color: #04fc10;
+}
+
 .social-icons{
     margin-top: 30px;
 }
@@ -347,6 +376,31 @@ nav ul li a:hover::after{
 
 }
 
+.fa-square-facebook{
+    color: #2e31f0;   
+}
+
+.fa-tiktok{
+    color: white;
+}
+
+.fa-instagram{
+    color: white;
+}
+
+.fa-youtube{
+    color: red;
+}
+
+.fa-linkedin{
+    color: blue;
+}
+
+
+.social-icons a{
+    display: inline-block;
+    transition: transform 0.5s;
+}
 
 .social-icons a:hover{
     color: white;
@@ -380,6 +434,11 @@ form input, form textarea{
 
 }
 
+form input{
+    width: 300px;
+    display: block;
+}
+
 form .btn2{
     padding: 14px 60px;
     font-size: 18px;
@@ -395,4 +454,10 @@ form .btn2{
     background: rgb(183, 183, 183);
     font-weight: 300;
     margin-top: 20px;
+}
+
+#msg{
+    color: white;
+    margin-top: -40px;
+    display: block;
 }
