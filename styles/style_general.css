@@ -480,116 +480,124 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 600px) {
+
+
     #header {
         background-image: none;
-        width: 1200px;
+    }
+    
+    #header .logo{
+        margin-top: -40px;
     }
 
+    .header-text {
+        margin-top: 100%;
+    font-size: 6px; 
+   }
+
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    .header-text p{
+        font-size: 25px;
+    }
+
+
     #header .container {
-        width: 900px;
+      
         margin-top: 0;
         display: block;
         align-items: center;
     }
 
     .header-contents img {
-        width: 450px;
+        width: 300px;
         position: absolute;
-        margin-left: 250px;
     }
 
     .header-contents {
-        margin-top: -100px;
+        
         margin-left: -100px;
-        padding-left: 0;
-        width: 900px;
+        display: block;
+        margin-top: -490px;
+    }
+
+    .header-img-container{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        margin-left: 70px;
     }
 
-    .header-text {
-        font-size: 40px;
-    }
-
-    .header-text h1 {
-        font-size: 110px;
-    }
+    
 
     nav .fa-solid {
-        display: flex;
-        font-size: 55px;
+        display: block;
+        font-size: 25px;
     }
-
-    nav {
-        width: 1050px;
-        height: 100px;
-    }
-
 
     nav ul {
         background: #b6b1b1;
+        z-index: 1;
         position: fixed;
         top: 0;
-        right: -400px;
-        width: 400px;
-        height: 100%;
+        right: 0;
+        width: 140px;
+        height: 100vh;
         padding-top: 50px;
+        transition: right 0.5s;
     }
 
     nav ul li {
         display: block;
-        margin: 30px;
-        padding-top: 20px;
+        margin: 22px;
     }
 
     nav ul .fa-solid {
         position: absolute;
-
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
 
+
     .fa-bars{
-        margin-left: 0px;
-        margin-bottom: 12px;
+        margin-right: 15px;
+        margin-top: -65px;
+       
     }
 
+    /*-----------About Me-------------*/
 
-    html {
-        width: 1200px;
+    .container .row{
+        display: block;
     }
 
-    /*----About---------*/
     #about{
-        margin-top: 300px;
+        margin-top: 0;
     }
-
-    .about-col-1{
+    #about img{
         display: none;
     }
-    
 
-    #about .row{
-        margin-left: 170px;
-        width: 800px;
-    }
-    .skills-column2{
-        margin-left: 120px;
+    .tab-titles{
+        justify-content: center;
     }
 
-    /*--------------Portfolio------------------*/
-    #portfolio{
-        background-image: none;
-    }
+   
+   .skills-column1{
+    margin-left: 15px;
+   }
+   .skills-column2{
+    margin-left: 30px;
+   }
 
-    .work-list{
-        display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 100px;
-    margin-top: 50px;
-    }
+   #portfolio{
+    background-image: none;
+   }
 
-    
+   #contact{
+    margin-top: 1700px;
+   }
+
 }
