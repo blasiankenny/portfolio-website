@@ -3,8 +3,9 @@
 <html>
 
 <head>
-    
+
     <title>Personal Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style_general.css">
     <script src="https://kit.fontawesome.com/e3c3d8fb0c.js" crossorigin="anonymous"></script>
     <link class="icon" rel="icon" type="" href="images/logo.png">
@@ -15,18 +16,19 @@
     <!---------------header----------------->
     <div id="header">
         <div class="container">
-            
+
             <nav>
                 <a href="#header"><img class="logo" src="images/logo.png"></a>
-                
-                <ul>
+
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="photography/photography_main.html">Hobbies</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-contents">
                 <div class="header-text">
@@ -36,7 +38,7 @@
                 <div class="header-img-container">
                     <img src="images/IMG_6441.PNG">
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -79,34 +81,36 @@
                             <div class="skills-column2">
                                 <li><span>Operating Systems:</span><br> Windows OS| Mac OS| Linux</li>
                                 <li><span>Programming Languages:</span><br>
-                                        Java|Python|C|C++|C#|SQL|<br>JavaScript|HTML|CSS|SML|R|Matlab</span></li>
+                                    Java|Python|C|C++|C#|SQL|<br>JavaScript|HTML|CSS|SML|R|Matlab</span></li>
                                 <li><span>Software:</span><br> Visual Studio|Eclipse|Jupyter Notebook</li>
                                 <li><span>Microsoft Office Suite:</span><br> Word|PowerPoint|Excel</li>
                                 <li><span>Adobe Suite:</span><br> Illustrator|Photoshop|Animate</li>
                                 <li><span>2 years of Video editing</span></li>
                             </div>
-                     
-                                
+
+
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
                         <ul class="tab-contents-experience">
                             <li><span>Software Testing Intern</span><br>Research Center of
-                                    Computational Mechanics, Tokyo, Japan</li>
+                                Computational Mechanics, Tokyo, Japan</li>
                             <li><span>Leader/Organizer</span><br>Japanese Culture Club,
-                                    Victoria, BC, Canada</li>
+                                Victoria, BC, Canada</li>
                             <li><span>Content Creator</span> (Self-Employment)<br>Social Media Content Creation,
-                                    Japan and Canada</li>
+                                Japan and Canada</li>
 
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul class="tab-contents-education">
                             <li><span>Bachelor of Science in Computer Science</span> (BSc)
-                                    <br>University of Victoria, Victoria, BC, Canada</li>
+                                <br>University of Victoria, Victoria, BC, Canada
+                            </li>
                             <li><span>Diploma in Arts and Science Studies</span>
-                                    <br>Camosun College, Victoria, BC, Canada</li>
+                                <br>Camosun College, Victoria, BC, Canada
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -117,7 +121,7 @@
 
     <!------------------------Portfolio---------------------------->
 
- 
+
 
     <div id="portfolio">
         <div class="container">
@@ -128,7 +132,8 @@
                     <div class="layer">
                         <h3>Digital Art</h3>
                         <p>Products Using Adobe Software</p>
-                        <a href="digital_art/digital_art_main.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="digital_art/digital_art_main.html"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -144,71 +149,90 @@
                     <div class="layer">
                         <h3>My Closet</h3>
                         <p>A program for me to choose my outfit</p>
-                        <a href="my-closet/closet_general.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="my-closet/closet_general.html"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
             <a href="#" class="btn">See more</a>
-                </div>
+        </div>
     </div>
 
     <!--------------------------contact---------------------------->
 
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p><a href="#"><i class="fa-solid fa-phone"></i></a> kenny3a38@gmail.com</p>
-                        <p><a href="#"><i class="fa-solid fa-envelope"></i></a> 778-966-7775</p>
-                        <div class="social-icons fb">
-                            <a href="https://www.facebook.com/profile.php?id=100019569842138"><i class="fa-brands fa-square-facebook"></i></a>
-                            <a href="https://www.tiktok.com/@kennyhongo?lang=en"><i class="fa-brands fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/kennyhongo/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCP_kbDnZSdFq4CFs_cxMH_w"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/in/kenny-hongo-874740204/"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                        <a href="images/kenny_resume_2023.pdf" download class="btn btn2">Download CV</a>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><a href="#"><i class="fa-solid fa-phone"></i></a> kenny3a38@gmail.com</p>
+                    <p><a href="#"><i class="fa-solid fa-envelope"></i></a> 778-966-7775</p>
+                    <div class="social-icons fb">
+                        <a href="https://www.facebook.com/profile.php?id=100019569842138"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@kennyhongo?lang=en"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/kennyhongo/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCP_kbDnZSdFq4CFs_cxMH_w"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/kenny-hongo-874740204/"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
+                    <a href="images/kenny_resume_2023.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
-            
-        </div>
-        <div class="copyright">
-            <p>Copyright @Kenny</p>
         </div>
 
+    </div>
+    <div class="copyright">
+        <p>Copyright @Kenny</p>
+    </div>
 
-    <script src="scripts/website.js">
+    <script src="scripts/website.js"></script>
+    
+    
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-500px";
+        }
+
     </script>
+
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxAnotcBeVaD8CyN--T2UzZiHE7zRy2VnEisDH_vHapb8kpPi9O4UrrmqunR2l4WptiUg/exec';
         const form = document.forms['submit-to-google-sheet']
-      
+
         const msg = document.getElementById("msg");
 
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Sent successfully!";
-            setTimeout(()=>{
-                msg.innerHTML = "";
-            },5000)
-        form.reset();})
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Sent successfully!";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000)
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
 </body>
 
 </html>
