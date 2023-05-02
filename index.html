@@ -33,7 +33,10 @@
                     <p>Computer Science Student</p>
                     <h1>Hi, I'm <span>Kenny</span> Hongo<br> from Japan</h1>
                 </div>
-                <img src="images/IMG_6441.PNG">
+                <div class="header-img-container">
+                    <img src="images/IMG_6441.PNG">
+                </div>
+                
             </div>
         </div>
     </div>
@@ -46,7 +49,7 @@
                     <img src="images/IMG_6439.PNG">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
+                    <h1 class="sub-title about">About Me</h1>
                     <p>Highly motivated computer science student
                         interested in Software Development.
                         Skilled in business communications with
@@ -82,6 +85,8 @@
                                 <li><span>Adobe Suite:</span><br> Illustrator|Photoshop|Animate</li>
                                 <li><span>2 years of Video editing</span></li>
                             </div>
+                     
+                                
                         </ul>
                     </div>
 
@@ -135,7 +140,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/question.jpg">
+                    <img src="images//wardrobe.jpg">
                     <div class="layer">
                         <h3>My Closet</h3>
                         <p>A program for me to choose my outfit</p>
@@ -156,7 +161,7 @@
                         <h1 class="sub-title">Contact Me</h1>
                         <p><a href="#"><i class="fa-solid fa-phone"></i></a> kenny3a38@gmail.com</p>
                         <p><a href="#"><i class="fa-solid fa-envelope"></i></a> 778-966-7775</p>
-                        <div class="social-icons">
+                        <div class="social-icons fb">
                             <a href="https://www.facebook.com/profile.php?id=100019569842138"><i class="fa-brands fa-square-facebook"></i></a>
                             <a href="https://www.tiktok.com/@kennyhongo?lang=en"><i class="fa-brands fa-tiktok"></i></a>
                             <a href="https://www.instagram.com/kennyhongo/"><i class="fa-brands fa-instagram"></i></a>
@@ -166,12 +171,13 @@
                         <a href="images/kenny_resume_2023.pdf" download class="btn btn2">Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -183,8 +189,26 @@
 
 
     <script src="scripts/website.js">
-        
     </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAnotcBeVaD8CyN--T2UzZiHE7zRy2VnEisDH_vHapb8kpPi9O4UrrmqunR2l4WptiUg/exec';
+        const form = document.forms['submit-to-google-sheet']
+      
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Sent successfully!";
+            setTimeout(()=>{
+                msg.innerHTML = "";
+            },5000)
+        form.reset();})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>
