@@ -1,10 +1,73 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     background-color: rgb(198, 193, 193);
     background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
+
+
+
+/*-----------------menu---------------------*/
+
+
+nav{
+    margin-top: -16px;
+    padding: 0 0 20px 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 243, 229);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 5px solid rgb(86, 86, 86);
+    position: fixed;
+    z-index: 1;
+
+}
+
+.top-icons{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.top-icons button{
+    width: 80px;
+    height: 80px;
+    border-top: none;
+    border: 3px solid rgb(86, 86, 86); 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 5px 2px rgba(119, 119, 119, 0.9);
+}
+
+.top-icons button img{
+    width: 40px;
+    padding-top: 6px;
+    object-fit: cover;
+}
+
+.top-icons button .whole{
+    width: 30px;
+}
+
+
+/*-----------------fitting room-----------------*/
+
+
+
 #fitting-room{
-    margin-top: 40px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -158,6 +221,16 @@ body {
 
 .prevBtn{
     display: block;
+}
+.prevBtn,
+.nextBtn{
+    border: none;
+    background: none;
+}
+
+.prevBtn img,
+.nextBtn img{
+    width: 90px;
 }
 
 .btn-container{
