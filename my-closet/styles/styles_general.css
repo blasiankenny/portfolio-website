@@ -139,6 +139,7 @@ margin-top: 10px;
 
 .mannequin-upper {
     display: flex;
+    height: 700px;
     justify-content: center;
     margin-top: 50px;
     margin-right: 10px;
