@@ -38,7 +38,7 @@ function displayMannequin() {
   }
 
   document.querySelector('.mannequin-upper').innerHTML = `
-  <img src=${mannequin.img} alt=${mannequin.title} class="photo">
+  <img src=${mannequin.img} alt="" class="photo">
   `;
   // document.querySelector('.mannequin-lower').innerHTML = `
   // <img src=${mannequinLower.img} alt=${mannequinLower.title} class="photo">
