@@ -28,18 +28,18 @@ function displayMannequin() {
   let mannequin;
   let mannequinLower;
 
-  for (let i = 0; i < newMannequins.length; i++) {
-    const id = newMannequins[i].id;
-    if (id === mannequinId)
-      mannequin = newMannequins[i];
+  // for (let i = 0; i < newMannequins.length; i++) {
+  //   const id = newMannequins[i].id;
+  //   if (id === mannequinId)
+  //     mannequin = newMannequins[i];
 
-    if (id === mannequinIdLower)
-      mannequinLower = newMannequins[i];
-  }
+  //   if (id === mannequinIdLower)
+  //     mannequinLower = newMannequins[i];
+  // }
 
-  document.querySelector('.mannequin-upper').innerHTML = `
-  <img src=${mannequin.img} alt="" class="photo">
-  `;
+  // document.querySelector('.mannequin-upper').innerHTML = `
+  // <img src=${mannequin.img} alt="" class="photo">
+  // `;
   // document.querySelector('.mannequin-lower').innerHTML = `
   // <img src=${mannequinLower.img} alt=${mannequinLower.title} class="photo">
   // `;
