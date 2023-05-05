@@ -20,7 +20,7 @@ nav {
     margin-top: -16px;
     padding: 0 0 20px 0;
     width: 60%;
-    height: 9%;
+    height: 80px;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 243, 229);
@@ -118,6 +118,7 @@ nav {
     display: flex;
     flex-direction: row;
     height: 900px;
+    position: relative;
 }
 
 #fitting-room-lower>div:nth-child(1) {
@@ -196,7 +197,7 @@ nav {
     display: grid;
     place-items: center;
     transition: all 0.45s ease-in-out;
-    margin-top: 160px;
+    margin-top: 140px;
 }
 
 .slide-head {

@@ -486,10 +486,10 @@ export const closet =[
 export const mannequins =[
     {
       id: 1,
-      img: "./images/mannequins/upper_body.png",
+      img: "./images/mannequins/upper_body.PNG",
     },
     {
       id: 2,
-      img: "./images/mannequins/lower_body.png",
+      img: "./images/mannequins/lower_body.PNG",
     }
   ]
