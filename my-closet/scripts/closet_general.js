@@ -9,37 +9,49 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector(".jacket").addEventListener('click', () => {
   displayClosetItems("jacket", "up");
+  removeFilterButtons("up");
   makeSlides();
 })
 document.querySelector(".tops").addEventListener('click', () => {
   displayClosetItems("tops", "up");
+  displayLengthFilterButtons("tops", "up");
   makeSlides();
 })
 document.querySelector(".bottoms").addEventListener('click', () => {
   displayClosetItems("bottoms", "low");
+  displayLengthFilterButtons("bottoms", "low");
   makeSlidesLower();
 })
 
 const mannequinId = 1;
 const mannequinIdLower = 2;
 
+function removeFilterButtons(upOrLow){
+  if(upOrLow ==="up"){
+    document.querySelector(".filter-buttons-container").innerHTML="";
+  }else{
+    document.querySelectorAll(".filter-buttons-container-lower").innerHTML="";
+
+  }
+}
+
 function displayMannequin() {
 
   let mannequin;
   let mannequinLower;
 
-  // for (let i = 0; i < newMannequins.length; i++) {
-  //   const id = newMannequins[i].id;
-  //   if (id === mannequinId)
-  //     mannequin = newMannequins[i];
+  for (let i = 0; i < newMannequins.length; i++) {
+    const id = newMannequins[i].id;
+    if (id === mannequinId)
+      mannequin = newMannequins[i];
 
-  //   if (id === mannequinIdLower)
-  //     mannequinLower = newMannequins[i];
-  // }
+    if (id === mannequinIdLower)
+      mannequinLower = newMannequins[i];
+  }
 
-  // document.querySelector('.mannequin-upper').innerHTML = `
-  // <img src=${mannequin.img} alt="" class="photo">
-  // `;
+  document.querySelector('.mannequin-upper').innerHTML = `
+  <img src=${mannequin.img} alt="" class="photo">
+  `;
   // document.querySelector('.mannequin-lower').innerHTML = `
   // <img src=${mannequinLower.img} alt=${mannequinLower.title} class="photo">
   // `;
@@ -61,6 +73,98 @@ function displayClosetItems(category, upOrLow = "up") {
     display = newCloset.map((item) => {
       if (item.category === category) {
         return `<div class="slide-lower"><img class="slide-img-lower ${item.title} ${item.category}" src="${item.img}" alt="" /></div>
+      `;
+      }
+    });
+  }
+  display = display.join("");
+  if (upOrLow === "up") {
+    document.querySelector('#fitting-room .slider-container .items').
+      innerHTML = display;
+  } else {
+    document.querySelector('#fitting-room-lower .slider-container-lower .items').
+      innerHTML = display;
+  }
+
+}
+
+
+
+function displayLengthFilterButtons(category, upOrLow) {
+
+
+  let lengths = ["all", "long", "short"];
+
+
+
+  let lengthBtns;
+  let filterBtns;
+
+
+  if (upOrLow === "up") {
+    lengthBtns = lengths.map((length) => {
+      return `<button class="filter-btn" type="button" data-id="${length}">${length}</button>`;
+    }).join("");
+    document.querySelector(".filter-buttons-container").innerHTML = lengthBtns;
+    filterBtns = document.querySelectorAll('.filter-btn');
+  } else {
+    lengthBtns = lengths.map((length) => {
+      return `<button class="filter-btn-lower" type="button" data-id="${length}">${length}</button>`;
+    }).join("");
+    document.querySelector(".filter-buttons-container-lower").innerHTML = lengthBtns;
+    filterBtns = document.querySelectorAll('.filter-btn-lower');
+
+  }
+
+
+   
+
+  //filter items
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const length = e.currentTarget.dataset.id;
+      // const itemsFiltered = newCloset.filter((closetItem)=>{
+      //   return closetItem.length === length;
+      // })
+      console.log(e.currentTarget.dataset.id);
+      if (length === "all") {
+
+        displayClosetItems(category, upOrLow);
+      } else {
+        displayClosetItemsLength(category, upOrLow, length);
+      }
+
+      if (upOrLow === "up") {
+
+
+        makeSlides();
+      } else {
+        makeSlidesLower();
+      }
+    })
+  })
+
+
+}
+
+
+
+function displayClosetItemsLength(category, upOrLow = "up", length) {
+
+
+  let display;
+  if (upOrLow === "up") {
+    display = newCloset.map((item) => {
+      if (item.category === category && item.length === length) {
+        return `<div class="slide"><img class="slide-img ${item.title} ${item.category} ${item.length}" src="${item.img}" alt="" /></div>
+      `;
+      }
+    });
+  } else {
+    display = newCloset.map((item) => {
+      if (item.category === category && item.length === length) {
+        return `<div class="slide-lower"><img class="slide-img-lower ${item.title} ${item.category} ${item.length}" src="${item.img}" alt="" /></div>
       `;
       }
     });
@@ -145,7 +249,7 @@ function makeSlides() {
     slide.style.left = `${index * 100}%`;
   });
 
-  
+
 }
 
 
@@ -213,7 +317,7 @@ prevBtn_lower.addEventListener("click", function () {
 
 function makeSlidesLower() {
   counter_lower = 0;
-  
+
   slides_lower = document.querySelectorAll(".slide-lower");
 
   nextBtn = document.querySelector("#fitting-room-lower .nextBtn");
@@ -225,7 +329,7 @@ function makeSlidesLower() {
   slides_lower.forEach(function (slide, index) {
     slide.style.left = `${index * 100}%`;
   });
-  
+
 }
 
 function carousel_lower() {
