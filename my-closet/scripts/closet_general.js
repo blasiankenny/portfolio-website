@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector(".jacket").addEventListener('click', () => {
   displayClosetItems("jacket", "up");
-  removeFilterButtons("up");
+  //removeFilterButtons("up");
   makeSlides();
 });
 document.querySelector(".tops").addEventListener('click', () => {
@@ -25,13 +25,13 @@ document.querySelector(".bottoms").addEventListener('click', () => {
 
 document.querySelector(".hats").addEventListener('click', () => {
   displayClosetItems("hats", "up");
-  removeFilterButtons("up");
+  //removeFilterButtons("up");
   makeSlidesHead();
 });
 
 document.querySelector(".shoes").addEventListener('click', () => {
   displayClosetItems("shoes", "low");
-  removeFilterButtons("low");
+  //removeFilterButtons("low");
   makeSlidesFeet();
 });
 
