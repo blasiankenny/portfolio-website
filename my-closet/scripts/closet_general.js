@@ -4,27 +4,39 @@ const newMannequins = mannequins;
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  displayMannequin();
+  //displayMannequin();
 });
 
 document.querySelector(".jacket").addEventListener('click', () => {
   displayClosetItems("jacket", "up");
   removeFilterButtons("up");
   makeSlides();
-})
+});
 document.querySelector(".tops").addEventListener('click', () => {
   displayClosetItems("tops", "up");
   displayLengthFilterButtons("tops", "up");
   makeSlides();
-})
+});
 document.querySelector(".bottoms").addEventListener('click', () => {
   displayClosetItems("bottoms", "low");
   displayLengthFilterButtons("bottoms", "low");
   makeSlidesLower();
-})
+});
 
-const mannequinId = 1;
-const mannequinIdLower = 2;
+document.querySelector(".hats").addEventListener('click', () => {
+  displayClosetItems("hats", "up");
+  removeFilterButtons("up");
+  makeSlidesHead();
+});
+
+document.querySelector(".shoes").addEventListener('click', () => {
+  displayClosetItems("shoes", "low");
+  removeFilterButtons("low");
+  makeSlidesFeet();
+});
+
+// const mannequinId = 1;
+// const mannequinIdLower = 2;
 
 function removeFilterButtons(upOrLow){
   if(upOrLow ==="up"){
@@ -35,36 +47,43 @@ function removeFilterButtons(upOrLow){
   }
 }
 
-function displayMannequin() {
+// function displayMannequin() {
 
-  let mannequin;
-  let mannequinLower;
+//   let mannequin;
+//   let mannequinLower;
 
-  for (let i = 0; i < newMannequins.length; i++) {
-    const id = newMannequins[i].id;
-    if (id === mannequinId)
-      mannequin = newMannequins[i];
+//   for (let i = 0; i < newMannequins.length; i++) {
+//     const id = newMannequins[i].id;
+//     if (id === mannequinId)
+//       mannequin = newMannequins[i];
 
-    if (id === mannequinIdLower)
-      mannequinLower = newMannequins[i];
-  }
+//     if (id === mannequinIdLower)
+//       mannequinLower = newMannequins[i];
+//   }
 
-  document.querySelector('.mannequin-upper').innerHTML = `
-  <img src=${mannequin.img} alt="" class="photo">
-  `;
-  // document.querySelector('.mannequin-lower').innerHTML = `
-  // <img src=${mannequinLower.img} alt=${mannequinLower.title} class="photo">
-  // `;
+//   document.querySelector('.mannequin-upper').innerHTML = `
+//   <img src=${mannequin.img} alt="" class="photo">
+//   `;
+//   document.querySelector('.mannequin-lower').innerHTML = `
+//   <img src=${mannequinLower.img} alt=${mannequinLower.title} class="photo">
+//   `;
 
-}
+// }
 
 function displayClosetItems(category, upOrLow = "up") {
 
 
   let display;
   if (upOrLow === "up") {
+
     display = newCloset.map((item) => {
+
       if (item.category === category) {
+        if(item.category === "hats"){
+          return `<div class="slide-head"><img class="slide-img ${item.title} ${item.category}" src="${item.img}" alt="" /></div>
+          `;
+        }
+
         return `<div class="slide"><img class="slide-img ${item.title} ${item.category}" src="${item.img}" alt="" /></div>
       `;
       }
@@ -72,6 +91,10 @@ function displayClosetItems(category, upOrLow = "up") {
   } else {
     display = newCloset.map((item) => {
       if (item.category === category) {
+        if(item.category === "shoes"){
+          return `<div class="slide-lower-feet"><img class="slide-img-lower ${item.title} ${item.category}" src="${item.img}" alt="" /></div>
+          `;
+        }
         return `<div class="slide-lower"><img class="slide-img-lower ${item.title} ${item.category}" src="${item.img}" alt="" /></div>
       `;
       }
@@ -79,14 +102,27 @@ function displayClosetItems(category, upOrLow = "up") {
   }
   display = display.join("");
   if (upOrLow === "up") {
-    document.querySelector('#fitting-room .slider-container .items').
+    if(category === "hats"){
+      document.querySelector('#fitting-room .slider-container .items-head').
       innerHTML = display;
+    }else{
+      document.querySelector('#fitting-room .slider-container .items').
+      innerHTML = display;
+    }
+    
   } else {
-    document.querySelector('#fitting-room-lower .slider-container-lower .items').
+    if(category === "shoes"){
+      document.querySelector('#fitting-room-lower .slider-container-lower .items-feet').
       innerHTML = display;
+    }else{
+      document.querySelector('#fitting-room-lower .slider-container-lower .items').
+      innerHTML = display;
+    }
+    
   }
 
 }
+
 
 
 
@@ -94,8 +130,6 @@ function displayLengthFilterButtons(category, upOrLow) {
 
 
   let lengths = ["all", "long", "short"];
-
-
 
   let lengthBtns;
   let filterBtns;
@@ -138,6 +172,7 @@ function displayLengthFilterButtons(category, upOrLow) {
       if (upOrLow === "up") {
 
 
+        
         makeSlides();
       } else {
         makeSlidesLower();
@@ -236,6 +271,7 @@ prevBtn.addEventListener("click", function () {
   carousel();
 });
 
+
 function makeSlides() {
   counter = 0;
   slides = document.querySelectorAll(".slide");
@@ -244,7 +280,6 @@ function makeSlides() {
   prevBtn = document.querySelector(".prevBtn");
   document.querySelector(".num-items-button").innerHTML =
     `1/${slides.length}`;
-
   slides.forEach(function (slide, index) {
     slide.style.left = `${index * 100}%`;
   });
@@ -275,6 +310,69 @@ function carousel() {
   }
   slides.forEach(function (slide) {
     slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
+
+
+
+let slidesHead = document.querySelectorAll(".slide-head");
+let nextBtnHead = document.querySelector(".nextBtn-head");
+let prevBtnHead = document.querySelector(".prevBtn-head");
+
+
+let counterHead;
+
+nextBtnHead.addEventListener("click", function () {
+  counterHead++;
+  carouselHead();
+});
+
+prevBtnHead.addEventListener("click", function () {
+  counterHead--;
+  carouselHead();
+});
+
+
+function makeSlidesHead() {
+  counterHead = 0;
+  slidesHead = document.querySelectorAll(".slide-head");
+
+  nextBtnHead = document.querySelector(".nextBtn-head");
+  prevBtnHead = document.querySelector(".prevBtn-head");
+  document.querySelector(".num-items-button-head").innerHTML =
+    `1/${slidesHead.length}`;
+
+  slidesHead.forEach(function (slide, index) {
+    slide.style.left = `${index * 100}%`;
+  });
+
+
+}
+
+
+
+function carouselHead() {
+  // working with slides
+  if (counterHead === slidesHead.length) {
+    counterHead = 0;
+  }
+  if (counterHead < 0) {
+    counterHead = slidesHead.length - 1;
+  }
+
+  document.querySelector(".num-items-button-head").innerHTML =
+    `${counterHead + 1}/${slidesHead.length}`;
+  // working with buttons
+
+  if (counterHead < slidesHead.length - 1) {
+    nextBtnHead.style.display = "block";
+  }
+
+  if (counterHead > 0) {
+    prevBtnHead.style.display = "block";
+  }
+  slidesHead.forEach(function (slide) {
+    slide.style.transform = `translateX(-${counterHead * 100}%)`;
   });
 }
 
@@ -378,3 +476,64 @@ function carousel_lower() {
 //     document.querySelector(".slider-container-lower").style.background=`rgb(0,0,0)`;
 // })
 
+let slidesFeet = document.querySelectorAll(".slide-lower-feet");
+let nextBtnFeet = document.querySelector(".nextBtn-feet");
+let prevBtnFeet = document.querySelector(".prevBtn-feet");
+
+
+let counterFeet;
+
+nextBtnFeet.addEventListener("click", function () {
+  counterFeet++;
+  carouselFeet();
+});
+
+prevBtnFeet.addEventListener("click", function () {
+  counterFeet--;
+  carouselFeet();
+});
+
+
+function makeSlidesFeet() {
+  counterFeet = 0;
+  slidesFeet = document.querySelectorAll(".slide-lower-feet");
+
+  nextBtnFeet = document.querySelector(".nextBtn-feet");
+  prevBtnFeet = document.querySelector(".prevBtn-feet");
+  document.querySelector(".num-items-button-lower-feet").innerHTML =
+    `1/${slidesFeet.length}`;
+
+  slidesFeet.forEach(function (slide, index) {
+    slide.style.left = `${index * 100}%`;
+  });
+
+
+}
+
+
+
+function carouselFeet() {
+  // working with slides
+  if (counterFeet === slidesFeet.length) {
+    counterFeet = 0;
+  }
+  if (counterFeet < 0) {
+    counterFeet = slidesFeet.length - 1;
+  }
+
+
+  document.querySelector(".num-items-button-lower-feet").innerHTML =
+    `${counterFeet + 1}/${slidesFeet.length}`;
+  // working with buttons
+
+  if (counterFeet < slidesFeet.length - 1) {
+    nextBtnFeet.style.display = "block";
+  }
+
+  if (counterFeet > 0) {
+    prevBtnFeet.style.display = "block";
+  }
+  slidesFeet.forEach(function (slide) {
+    slide.style.transform = `translateX(-${counterFeet * 100}%)`;
+  });
+}

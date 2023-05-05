@@ -147,6 +147,24 @@ nav {
 
 }
 
+.slider-container .items-head {
+    display: flex;
+    align-items: center;
+}
+
+.slider-container .items-head img {
+    width: 170px;
+}
+
+
+
+
+.slider-container .items-feet img {
+    width: 270px;
+}
+
+
+
 .mannequin-upper {
     display: flex;
     justify-content: center;
@@ -181,9 +199,21 @@ nav {
     margin-top: 160px;
 }
 
+.slide-head {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: all 0.45s ease-in-out;
+    margin-top: 160px;
+}
+
 .slide-img {
     width: 465px;
 }
+
+
 
 /* ---------------slider lower------------------- */
 
@@ -204,6 +234,16 @@ nav {
     transition: all 0.45s ease-in-out;
     margin-top: -80px;
 
+}
+
+.slide-lower-feet {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: all 0.45s ease-in-out;
+    margin-top: 660px;
 }
 
 .slide-img-lower {
@@ -232,7 +272,9 @@ nav {
     cursor: pointer;
 }
 
-.prevBtn {
+.prevBtn,
+.prevBtn-head ,
+.prevBtn-feet{
     display: block;
 }
 
@@ -249,19 +291,26 @@ nav {
 }
 
 .prevBtn,
-.nextBtn {
+.nextBtn,
+.prevBtn-head,
+.nextBtn-head,
+.prevBtn-feet,
+.nextBtn-feet {
     border: none;
     background: none;
     margin-top: 7px;
 }
 
-.prevBtn img {
+.prevBtn img,
+.nextBtn img,
+.prevBtn-head img,
+.nextBtn-head img,
+.prevBtn-feet img,
+.nextBtn-feet img{
     width: 70%;
 }
 
-.nextBtn img {
-    width: 70%;
-}
+
 
 .btn-container {
     width: 90%;
@@ -269,8 +318,22 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 780px;
+    margin-top: 550px;
 }
+
+.btn-container-head {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+
+}
+
+
+
+
 
 .btn-container>div:nth-child(1) {
     flex: 0 0 33%;
@@ -284,9 +347,19 @@ nav {
     flex: 0 0 33%;
 }
 
-.prevBtn:hover,
-.nextBtn:hover {
-    color: rgb(46, 146, 61);
+
+
+
+.btn-container-head>div:nth-child(1) {
+    flex: 0 0 33%;
+}
+
+.btn-container-head>div:nth-child(2) {
+    flex: 0 0 33%;
+}
+
+.btn-container-head>div:nth-child(3) {
+    flex: 0 0 33%;
 }
 
 /* --------------Buttons lower------------------ */
