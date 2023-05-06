@@ -8,25 +8,26 @@ img {
 
 .slider-container {
   border: 5px solid rgb(86, 86, 86);
-  width: 100%;
+  width: 1500px;
+  height: 900px;
   margin: 0 auto;
-  max-width: 80rem;
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
   margin-top: 40px;
+
 }
 .slide {
   position: absolute;
   width: 100%;
   background:rgb(133, 133, 133);
   display: grid;
-  place-items: center;
   transition: all 0.25s ease-in-out;
   text-align: center;
 }
 .slide-img {
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 
@@ -55,18 +56,5 @@ img {
   color: rgb(120, 17, 17);
 }
 
-@media screen and (min-width: 576px) {
-  .slider-container {
-    height: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .slider-container {
-    height: 100%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .slider-container {
-    height: 80vh;
-  }
-}
+
+
