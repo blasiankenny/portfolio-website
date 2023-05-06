@@ -89,6 +89,8 @@ nav {
 
 /*-----------------fitting room upper-----------------*/
 
+
+
 #fitting-room {
 
     width: 1500px;
@@ -277,6 +279,8 @@ nav {
 .prevBtn-head ,
 .prevBtn-feet{
     display: block;
+    cursor: pointer;
+
 }
 
 .num-items {
@@ -300,6 +304,8 @@ nav {
     border: none;
     background: none;
     margin-top: 7px;
+    cursor: pointer;
+
 }
 
 .prevBtn img,
@@ -316,20 +322,19 @@ nav {
 .btn-container {
     width: 90%;
     height: 60px;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 550px;
+    display: none;
 }
 
 .btn-container-head {
     width: 90%;
     height: 60px;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 200px;
-
+    display: none;
 }
 
 

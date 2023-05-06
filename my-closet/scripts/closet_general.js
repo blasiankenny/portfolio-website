@@ -9,28 +9,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector(".jacket").addEventListener('click', () => {
   displayClosetItems("jacket", "up");
+  document.querySelector(".btn-container").style.display = "flex";
   //removeFilterButtons("up");
   makeSlides();
 });
 document.querySelector(".tops").addEventListener('click', () => {
   displayClosetItems("tops", "up");
+  document.querySelector(".btn-container").style.display = "flex";
   displayLengthFilterButtons("tops", "up");
   makeSlides();
 });
 document.querySelector(".bottoms").addEventListener('click', () => {
   displayClosetItems("bottoms", "low");
+  document.querySelector(".btn-container-lower").style.display = "flex";
   displayLengthFilterButtons("bottoms", "low");
   makeSlidesLower();
 });
 
 document.querySelector(".hats").addEventListener('click', () => {
   displayClosetItems("hats", "up");
+  document.querySelector(".btn-container-head").style.display = "flex";
   //removeFilterButtons("up");
   makeSlidesHead();
 });
 
 document.querySelector(".shoes").addEventListener('click', () => {
   displayClosetItems("shoes", "low");
+  document.querySelector(".btn-container-lower-feet").style.display = "flex";
   //removeFilterButtons("low");
   makeSlidesFeet();
 });
@@ -259,7 +264,7 @@ let nextBtn = document.querySelector(".nextBtn");
 let prevBtn = document.querySelector(".prevBtn");
 
 
-let counter;
+let counter=0;
 
 nextBtn.addEventListener("click", function () {
   counter++;
@@ -320,7 +325,7 @@ let nextBtnHead = document.querySelector(".nextBtn-head");
 let prevBtnHead = document.querySelector(".prevBtn-head");
 
 
-let counterHead;
+let counterHead=0;
 
 nextBtnHead.addEventListener("click", function () {
   counterHead++;
@@ -401,7 +406,7 @@ let slides_lower = document.querySelectorAll(".slide-lower");
 let nextBtn_lower = document.querySelector("#fitting-room-lower .nextBtn");
 let prevBtn_lower = document.querySelector("#fitting-room-lower .prevBtn");
 
-let counter_lower;
+let counter_lower=0;
 
 nextBtn_lower.addEventListener("click", function () {
   counter_lower++;
@@ -481,7 +486,7 @@ let nextBtnFeet = document.querySelector(".nextBtn-feet");
 let prevBtnFeet = document.querySelector(".prevBtn-feet");
 
 
-let counterFeet;
+let counterFeet=0;
 
 nextBtnFeet.addEventListener("click", function () {
   counterFeet++;
