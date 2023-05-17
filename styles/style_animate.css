@@ -1,168 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Darumadrop One', cursive;
-    background-color: rgb(250, 169, 93);
-
+  font-family: "Darumadrop One", cursive;
+  background-color: rgb(250, 169, 93);
 }
 
 .titles-all {
-
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-top: 0;
-    margin-bottom: 600px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: 0;
+  margin-bottom: 600px;
 }
 
-#header{
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-   
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.container{
-    padding: 10px 5%;
-    align-content: center;    
+.container {
+  padding: 10px 5%;
+  align-content: center;
+  padding-bottom: 100px;
 }
 
-nav{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
+nav {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.logo{
-   width: 100px;
+.logo {
+  width: 100px;
 }
 
-
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin-right: 50px;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 50px;
 }
 
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
 }
 
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: green;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: green;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
-nav ul li a:hover::after{
-    width: 100%;
+nav ul li a:hover::after {
+  width: 100%;
 }
-
-.animate-nav{
-    background-color: rgb(249, 235, 79);
-    padding: 2px 10px;
-    border-radius: 20px;
-}
-
-
 
 /*----------------------Animate------------------------*/
 
-
 #animate {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 video {
-    width: 1050px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: rgb(243, 233, 148);
+  width: 1050px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgb(243, 233, 148);
 }
 
 .final-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -150px;
-    padding-bottom: 200px;
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -150px;
+  padding-bottom: 200px;
 }
 
 .final-content p {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .process-content {
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-between;
-
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .process-content-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 70%;
 }
 
 .process-content p {
-    text-align: center;
-    font-size: 30px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .process-content-left-sketches {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
 }
 
 .process-content-left-left-top {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .process-content-left-left img {
-    width: 130px;
-    margin-top: 80px;
-    margin-left: 20px;
+  width: 130px;
+  margin-top: 80px;
+  margin-left: 20px;
 }
 
 .process-content-left-right img {
-    width: 230px;
-    padding-top: 100px;
-    margin-left: 10px;
+  width: 230px;
+  padding-top: 100px;
+  margin-left: 10px;
 }
 
 .process-content-right {
-    display: flex;
-    flex-direction: column;
-    margin-right: 90px;
-
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
 }
 
-
 .process-content-right img {
-    width: 250px;
+  width: 250px;
 }

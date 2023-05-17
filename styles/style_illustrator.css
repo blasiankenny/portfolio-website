@@ -1,141 +1,121 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Darumadrop One', cursive;
-    background-color: rgb(176, 188, 163);
+  font-family: "Darumadrop One", cursive;
+  background-color: rgb(176, 188, 163);
 }
 
 .titles-all {
-
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-top: 0;
-    margin-bottom: 600px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: 0;
+  margin-bottom: 600px;
 }
 
-
-#header{
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-   
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.container{
-    padding: 10px 5%;
-    align-content: center;    
+.container {
+  padding: 10px 5%;
+  align-content: center;
+  padding-bottom: 100px;
 }
 
-nav{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
+nav {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.logo{
-   width: 100px;
+.logo {
+  width: 100px;
 }
 
-
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin-right: 50px;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 50px;
 }
 
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
 }
 
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: green;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: green;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
-nav ul li a:hover::after{
-    width: 100%;
-}
-
-.illustrator-nav{
-    background-color: rgb(249, 235, 79);
-    padding: 2px 10px;
-    border-radius: 20px;
-}
-
-
-
-#illustrator {
-   margin: none;
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 .content-illustrator {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -200px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 100px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
 }
 
 .content-illustrator p {
-    font-size: 20px;
-    text-align: center;
+  font-size: 20px;
+  text-align: center;
 }
 
 .chicken-img,
 .chick-img,
 .Illustrator-sketch-img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-width: 8px;
-    border-style: solid;
-    border-color: rgb(58, 147, 102);
-    border-radius: 100%;
-
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgb(58, 147, 102);
+  border-radius: 100%;
 }
 
 .final-img {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-    border-width: 8px;
-    border-style: solid;
-    border-color: rgb(58, 147, 102);
-
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgb(58, 147, 102);
 }
 
 .chick-content {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .chick-and-sketch {
-    display: grid;
-    grid-template-columns: 1;
-    justify-content: space-between;
-
+  display: grid;
+  grid-template-columns: 1;
+  justify-content: space-between;
 }
