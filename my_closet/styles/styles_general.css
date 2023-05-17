@@ -1,0 +1,568 @@
+/* ----------------html----------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(198, 193, 193);
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*-----------------navigation menu---------------------*/
+
+nav {
+  margin-top: -16px;
+  padding: 0 0 20px 0;
+  width: 60%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 243, 229);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 5px solid rgb(86, 86, 86);
+  position: fixed;
+  z-index: 1;
+}
+
+.top-icons {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-icons button {
+  width: 80px;
+  height: 80px;
+  border-top: none;
+  border: 3px solid rgb(86, 86, 86);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 2px rgba(119, 119, 119, 0.9);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  /* adds a smooth transition */
+}
+
+.top-icons button:hover {
+  width: 100px;
+  /* increases the width */
+  height: 100px;
+  /* increases the height */
+  border-width: 4px;
+  /* increases the border width */
+  border-bottom-left-radius: 30px;
+  /* increases the border radius */
+  border-bottom-right-radius: 30px;
+  /* increases the border radius */
+  box-shadow: 0 10px 5px rgba(119, 119, 119, 0.9);
+  /* increases the box shadow */
+}
+
+.top-icons button img {
+  width: 50px;
+  padding-top: 10px;
+  object-fit: cover;
+}
+
+.top-icons button .whole {
+  width: 30px;
+}
+
+.top-icons button .tops {
+  margin-top: 10px;
+}
+
+/*-----------------fitting room upper-----------------*/
+
+#fitting-room {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  height: 900px;
+}
+
+#fitting-room > div:nth-child(1) {
+  flex: 0 0 25%;
+}
+
+#fitting-room > div:nth-child(2) {
+  flex: 0 0 50%;
+}
+
+#fitting-room > div:nth-child(3) {
+  flex: 0 0 25%;
+}
+
+/*-----------------fitting room lower-----------------*/
+
+#fitting-room-lower {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  height: 900px;
+  position: relative;
+}
+
+#fitting-room-lower > div:nth-child(1) {
+  flex: 0 0 25%;
+}
+
+#fitting-room-lower > div:nth-child(2) {
+  flex: 0 0 50%;
+}
+
+#fitting-room-lower > div:nth-child(3) {
+  flex: 0 0 25%;
+}
+
+/* ------------slider upper------------ */
+.slider-container {
+  border: 5px solid rgb(86, 86, 86);
+  width: 100%;
+  height: 900px;
+  margin-top: 100px;
+  position: relative;
+  border-radius: 0;
+  border-bottom: none;
+  overflow: hidden;
+  background-color: rgb(252, 252, 252);
+}
+
+.slider-container .items-head {
+  display: flex;
+  align-items: center;
+}
+
+.slider-container .items-head img {
+  width: 170px;
+}
+
+.slider-container .items-feet img {
+  width: 270px;
+}
+
+.mannequin-upper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.mannequin-upper img {
+  width: 250px;
+  position: absolute;
+  object-fit: contain;
+}
+
+.mannequin-lower {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.mannequin-lower img {
+  width: 500px;
+  position: absolute;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: all 0.45s ease-in-out;
+  margin-top: 140px;
+}
+
+.slide-head {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: all 0.45s ease-in-out;
+  margin-top: 160px;
+}
+
+.slide-img {
+  width: 465px;
+}
+
+/* ---------------slider lower------------------- */
+
+.slider-container-lower {
+  border: 5px solid rgb(86, 86, 86);
+  border-top: none;
+  margin-top: 0;
+}
+
+.slide-lower {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: all 0.45s ease-in-out;
+  margin-top: -80px;
+}
+
+.slide-lower-feet {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: all 0.45s ease-in-out;
+  margin-top: 660px;
+}
+
+.slide-img-lower {
+  width: 420px;
+}
+
+/* --------------Buttons upper------------------ */
+.resetBtn-black,
+.resetBtn,
+.colourBtn,
+.prevBtn,
+.nextBtn {
+  color: rgb(0, 0, 0);
+  background: rgb(172, 172, 172);
+  border-color: transparent;
+  border-radius: 10px;
+  width: 130px;
+  font-size: 1.75rem;
+  cursor: pointer;
+  margin: 0;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border: 2px solid rgb(86, 86, 86);
+  cursor: pointer;
+}
+
+.prevBtn,
+.prevBtn-head,
+.prevBtn-feet {
+  display: block;
+  cursor: pointer;
+}
+
+.num-items {
+  height: 100%;
+}
+
+.num-items button {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  border-width: 3px;
+  border-radius: 10px;
+}
+
+.prevBtn,
+.nextBtn,
+.prevBtn-head,
+.nextBtn-head,
+.prevBtn-feet,
+.nextBtn-feet {
+  border: none;
+  background: none;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.prevBtn img,
+.nextBtn img,
+.prevBtn-head img,
+.nextBtn-head img,
+.prevBtn-feet img,
+.nextBtn-feet img {
+  width: 70%;
+}
+
+.btn-container {
+  width: 90%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 550px;
+  display: none;
+}
+
+.btn-container-head {
+  width: 90%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  display: none;
+}
+
+.btn-container > div:nth-child(1) {
+  flex: 0 0 33%;
+}
+
+.btn-container > div:nth-child(2) {
+  flex: 0 0 33%;
+}
+
+.btn-container > div:nth-child(3) {
+  flex: 0 0 33%;
+}
+
+.btn-container-head > div:nth-child(1) {
+  flex: 0 0 33%;
+}
+
+.btn-container-head > div:nth-child(2) {
+  flex: 0 0 33%;
+}
+
+.btn-container-head > div:nth-child(3) {
+  flex: 0 0 33%;
+}
+
+/* --------------Buttons lower------------------ */
+
+.btn-container-lower {
+  margin-top: 10vh;
+}
+
+/*-------Individual item edtting---------*/
+
+.slide-img {
+  width: 560px;
+  height: 100%;
+}
+
+.hm_jacket_white {
+  margin-top: -60px;
+  margin-right: 17px;
+}
+
+.kamuy_vintage_jacket_black {
+  margin-top: -10px;
+  margin-right: 10px;
+  height: 90%;
+}
+
+.alfred_coat_black {
+  margin-right: 28px;
+  margin-top: 10px;
+}
+
+.fountain_tire_jacket_green {
+  margin-left: 20px;
+  margin-top: -10px;
+  width: 560px;
+}
+
+.hm_sherpa_jacket_brown {
+  margin-top: -60px;
+  margin-right: 40px;
+}
+
+.levis_denim_jacket_blue {
+  margin-right: 50px;
+  margin-top: 20px;
+  width: 480px;
+}
+
+.levis_sherpa_jacket_black {
+  margin-top: -40px;
+  margin-right: 8px;
+  width: 530px;
+}
+
+.redhead_jacket_grey {
+  margin-top: -120px;
+  margin-right: 20px;
+  width: 550px;
+}
+
+.vans_denim_jacket_blue {
+  margin-left: 20px;
+  width: 520px;
+}
+
+.zara_denim_jacket_black {
+  width: 530px;
+  height: 90%;
+  margin-left: 30px;
+  margin-top: -20px;
+}
+
+.tops {
+  margin-top: -120px;
+  object-fit: contain;
+}
+
+.ae_shirt_aloha {
+  margin-top: -80px;
+  width: 660px;
+}
+
+.carhartt_long_tshirt_dark_grey {
+  margin-top: -100px;
+  width: 570px;
+}
+
+.carhartt_tshirt_black {
+  margin-top: -90px;
+  margin-right: 30px;
+  width: 600px;
+}
+
+.champion_long_tshirt_green {
+  margin-right: 50px;
+}
+
+.champion_sweater_grey {
+  width: 520px;
+  margin-top: -140px;
+  margin-right: 40px;
+}
+
+.champion_tshirt_white {
+  margin-top: -180px;
+  margin-right: 20px;
+}
+
+.ck_shirt_white {
+  width: 570px;
+  margin-right: 20px;
+}
+
+.gap_sweater_camo {
+  margin-top: -140px;
+  margin-right: 30px;
+}
+
+.hm_shirt_keith_haring {
+  width: 700px;
+  margin-right: 90px;
+  margin-top: -100px;
+}
+
+.jordan_tshirt_shite {
+  margin-top: -180px;
+}
+
+.levis_sweater_light_brown {
+  margin-right: 40px;
+}
+
+.levis_tshirt_black {
+  width: 650px;
+}
+
+.levis_tshirt_white {
+  width: 660px;
+  margin-top: -190px;
+  margin-right: 30px;
+}
+
+.posty_tshirt_black {
+  width: 500px;
+  margin-right: 30px;
+}
+
+.pure_stuff_shirt_brown {
+  margin-top: 30px;
+  margin-right: 30px;
+  width: 500px;
+}
+
+.shirt_navy {
+  margin-right: 70px;
+}
+
+.tshirt_white {
+  width: 700px;
+}
+
+.zanerobe_shirt_black {
+  margin-right: 20px;
+  margin-top: -100px;
+}
+
+.zara_shirt_yellow {
+  margin-left: 20px;
+  margin-top: -100px;
+}
+
+.zara_tshirt_white {
+  margin-right: 20px;
+}
+
+.bottoms {
+  margin-top: -20px;
+  width: 460px;
+}
+
+.gap_pants_beige {
+  width: 500px;
+}
+
+.levis_jeans_dark_blue {
+  width: 500px;
+}
+
+.nike_sweats_black {
+  width: 400px;
+}
+
+/*---------------------------------------*/
+
+.other-buttons {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-buttons-container button {
+  background: linear-gradient(to bottom, #4caf50 0%, #3e8e41 100%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.filter-buttons-container-lower {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 450px;
+}
+
+.filter-buttons-container-lower button {
+  background: linear-gradient(to bottom, #4caf50 0%, #3e8e41 100%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 20px;
+
+  text-align: center;
+  text-decoration: none;
+}
